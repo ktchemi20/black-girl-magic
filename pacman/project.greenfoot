@@ -1,11 +1,11 @@
 #Greenfoot project file
-class.Ghost.image=teddybear.png
+class.Ghost.image=ghost.gif
 class.MyWorld.image=space1.jpg
 class.PacMan.image=right.gif
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.height=728
+editor.fx.0.width=800
+editor.fx.0.x=320
+editor.fx.0.y=53
 height=551
 package.numDependencies=0
 package.numTargets=3
