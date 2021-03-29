@@ -1,11 +1,11 @@
 #Greenfoot project file
 class.Ghost.image=ghost.gif
 class.MyWorld.image=space1.jpg
-class.PacMan.image=right.gif
+class.pacmantoright.image=right.gif
 editor.fx.0.height=728
 editor.fx.0.width=800
 editor.fx.0.x=320
-editor.fx.0.y=53
+editor.fx.0.y=52
 height=551
 package.numDependencies=0
 package.numTargets=3
@@ -24,10 +24,10 @@ readme.x=10
 readme.y=10
 simulation.speed=50
 target1.height=50
-target1.name=PacMan
+target1.name=pacmantoright
 target1.showInterface=false
 target1.type=ClassTarget
-target1.width=80
+target1.width=100
 target1.x=0
 target1.y=0
 target2.height=50
