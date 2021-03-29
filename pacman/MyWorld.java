@@ -1,7 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 /**
  * Write a description of class MyWorld here.
  * 
