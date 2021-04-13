@@ -20,18 +20,16 @@ public class Pacman extends Actor
         if(Greenfoot.isKeyDown("right")){
             setRotation(0);
             move(1);
-        }
-        if(Greenfoot.isKeyDown("left")){
+        }else if(Greenfoot.isKeyDown("left")){
             setRotation(180);
             move(1);
-        }
-        if(Greenfoot.isKeyDown("up")){
+        }else if(Greenfoot.isKeyDown("up")){
             setRotation(270);
             move(1);
-        }
-        if(Greenfoot.isKeyDown("down")){
+        }else if(Greenfoot.isKeyDown("down")){
             setRotation(90);
             move(1);
         }
     } 
+    
 } 
