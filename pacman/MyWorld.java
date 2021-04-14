@@ -21,6 +21,9 @@ public class MyWorld extends World
         addObject(new Wall(95,45),768,80);
         addObject(new Wall(130,45),305,80);
         addObject(new Wall(130,45),593,80);
+        addObject(new Wall(96,35),129,160);
+        addObject(new Wall(96,35),769,158);
+        addObject(new Wall(35,96),449,55);
         addObject(new Wall(180,90),91,260);
         addObject(new Wall(180,90),87,395);
         addObject(new Wall(180,90),810,260);
