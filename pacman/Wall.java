@@ -17,7 +17,7 @@ public class Wall extends Actor
         wall = new GreenfootImage(width,height);
         wall.setColor(Color.RED);
         wall.fillRect(0,0,width,height);
-        //wall.setTransparency(0);
+        wall.setTransparency(0);
         setImage(wall);
     }
     public void act(){}

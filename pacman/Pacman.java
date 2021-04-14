@@ -17,26 +17,30 @@ public class Pacman extends Actor
     public void act() 
     {
         setImage (rightGif.getCurrentImage());
+        boolean isMove = false;
+        int angle = 0;
+        
         if(Greenfoot.isKeyDown("right")){
-            setRotation(0);
-            move(1);
-        }
-        if(Greenfoot.isKeyDown("left")){
-            setRotation(180);
-            move(1);
-        }
-        if(Greenfoot.isKeyDown("up")){
-            setRotation(270);
-            move(1);
-        }
-        if(Greenfoot.isKeyDown("down")){
-            setRotation(90);
+            angle = 0;
+            isMove = true;
+        } else if(Greenfoot.isKeyDown("left")){
+            angle = 180;
+            isMove = true;
+        } else if(Greenfoot.isKeyDown("up")){
+            angle = 270;
+            isMove = true;
+        } else if(Greenfoot.isKeyDown("down")){
+            angle = 90;
+            isMove = true;
+        } 
+        int width = rightGif.getCurrentImage().getWidth();
+        int height = rightGif.getCurrentImage().getHeight();
+        if (isMove && getOneObjectAtOffset(width * (int)Math.cos(Math.toRadians(angle)),height * (int)Math.sin(Math.toRadians(angle)), Wall.class) == null){
+            setRotation(angle);
             move(1);
         }
         
-        /**
-         * if(getIntersectingObjects(Wall.class) == null){
-            setLocation(getX(),-10 + getY());|}
-         */
+        
+       
     } 
 } 
