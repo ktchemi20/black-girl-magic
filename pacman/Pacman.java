@@ -33,5 +33,10 @@ public class Pacman extends Actor
             setRotation(90);
             move(1);
         }
+        
+        /**
+         * if(getIntersectingObjects(Wall.class) == null){
+            setLocation(getX(),-10 + getY());|}
+         */
     } 
 } 
