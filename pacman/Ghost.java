@@ -15,9 +15,32 @@ public class Ghost extends Actor
     
     public void act() 
     {
+        //setImage (ghostGif.getCurrentImage());
+        //if(getOneObjectAtOffset(0,-10,Wall.class)== null){
+          //  setLocation(getX(),-10 + getY());
         setImage (ghostGif.getCurrentImage());
-        if(getOneObjectAtOffset(0,-10,Wall.class)== null){
-            setLocation(getX(),-10 + getY());
+        boolean isMove = false;
+        int angle = 0;
+        
+        if(Greenfoot.isKeyDown("right")){
+            angle = 0;
+            isMove = true;
+        } else if(Greenfoot.isKeyDown("left")){
+            angle = 180;
+            isMove = true;
+        } else if(Greenfoot.isKeyDown("up")){
+            angle = 270;
+            isMove = true;
+        } else if(Greenfoot.isKeyDown("down")){
+            angle = 90;
+            isMove = true;
+        } 
+        int width = ghostGif.getCurrentImage().getWidth();
+        int height = ghostGif.getCurrentImage().getHeight();
+        if (isMove && getOneObjectAtOffset(width * (int)Math.cos(Math.toRadians(angle)),height * (int)Math.sin(Math.toRadians(angle)), Wall.class) == null){
+            setRotation(angle);
+            move(1);
         }
-    }
+       }
+    
 }
