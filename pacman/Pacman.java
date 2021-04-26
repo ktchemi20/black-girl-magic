@@ -19,7 +19,10 @@ public class Pacman extends Actor
         setImage (rightGif.getCurrentImage());
         boolean isMove = false;
         int angle = 0;
-        
+        Actor food1 = getOneIntersectingObject(Food1.class);
+        Actor food2 = getOneIntersectingObject(Food2.class);
+        Actor food3 = getOneIntersectingObject(Food3.class);
+        Actor food4 = getOneIntersectingObject(Food4.class);
         if(Greenfoot.isKeyDown("right")){
             angle = 0;
             isMove = true;
@@ -39,12 +42,50 @@ public class Pacman extends Actor
             setRotation(angle);
             move(1);
         }
-        
-        
+        if(food1!=null)
+            {
+               World myWorld = getWorld();
+               myWorld.removeObject(food1);
+               Level1 level1 = (Level1)myWorld;
+               Counter counter = level1.getCounter();
+               counter.addScore();
+               
+              
+            } 
+        if(food2!=null)
+            {
+               World myWorld = getWorld();
+               myWorld.removeObject(food2);
+               Level1 level1 = (Level1)myWorld;
+               Counter counter = level1.getCounter();
+               counter.addScore();
+               
+            } 
+        if(food3!=null)
+            {
+               World myWorld = getWorld();
+               myWorld.removeObject(food3);
+               Level2 level2 = (Level2)myWorld;
+               Counter2 counter2 = level2.getCounter();
+               counter2.addScore();
+               
+              
+            } 
+        if(food4!=null)
+            {
+               World myWorld = getWorld();
+               myWorld.removeObject(food4);
+               Level2 level2 = (Level2)myWorld;
+               Counter2 counter2 = level2.getCounter();
+               counter2.addScore();
+               
+              
+            } 
     }
+    
+    
+    
 }
-        
-
         
        
    

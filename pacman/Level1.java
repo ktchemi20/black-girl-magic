@@ -7,13 +7,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level1 extends World
 {
-
+    Counter counter = new Counter();
     /**
      * Constructor for objects of class Level1.
      * 
      */
     public Level1()
-    {    
+    {   
+        
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(900, 700, 1);
         this.getBackground().scale(900,700);
@@ -67,6 +68,8 @@ public class Level1 extends World
         addObject(new Wall(35,86),542,326);
         addObject(new Wall(40,86),358,330);
         addObject(new Wall(220,25),451,359);
+        
+       
 
         addObject(new Food1(),401,234);
         addObject(new Food1(),401,194);
@@ -95,7 +98,6 @@ public class Level1 extends World
         addObject(new Food1(),642,331);
         addObject(new Food1(),642,461);
         addObject(new Food1(),642,526);
-        addObject(new Food1(),587,526);
         addObject(new Food1(),587,571);
         addObject(new Food1(),541,596);
         addObject(new Food1(),493,597);
@@ -208,8 +210,13 @@ public class Level1 extends World
         addObject(new Food2(),853,36);
         addObject(new Food2(),39,663);
         addObject(new Food2(),43,36);
-
+        
+        addObject(counter,81, 260);
+        
     }
-
+    
+    public Counter getCounter(){
+        return counter;
+    }
 }
 
