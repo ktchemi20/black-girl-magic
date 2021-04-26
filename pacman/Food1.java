@@ -14,9 +14,5 @@ public class Food1 extends Food
      */
     public void act() 
     {
-        if(getOneIntersectingObject(Pacman.class)!=null)
-            {
-                getWorld().removeObject(this);
-            }
     }    
 }
