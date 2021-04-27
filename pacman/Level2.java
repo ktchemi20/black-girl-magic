@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level2 extends World
 {
-    Counter2 counter2 = new Counter2();
     /**
      * Constructor for objects of class Level2.
      * 
@@ -19,6 +18,7 @@ public class Level2 extends World
         super(900, 700, 1); 
         this.getBackground().scale(900,700);
         addObject(new Pacman(),469,316);
+        
         
         addObject(new Wall(105,85),779,92);
         addObject(new Wall(55,350),807,350);
@@ -41,7 +41,7 @@ public class Level2 extends World
         addObject(new Wall(105,250),226,260);
         addObject(new Wall(265,40),466,363);
         addObject(new Wall(110,170),388,261);
-        
+       
         addObject(new Food3(),858,155);
         addObject(new Food3(),803,155);
         addObject(new Food3(),752,155);
@@ -173,8 +173,14 @@ public class Level2 extends World
         addObject(counter2,689,606);
         
     }
-    
+    Counter2 counter2 = new Counter2();
     public Counter2 getCounter(){
         return counter2;
+    }
+    
+    public void act(){
+        if (getObjects(Food3.class).size() == 0 && getObjects(Food4.class).size() == 0){
+            Greenfoot.setWorld(new YouWin());
+        }
     }
 }
