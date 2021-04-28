@@ -12,8 +12,8 @@ public class Level1 extends World
      * 
      */
     public Level1()
-    {   
-        
+   {   
+
         // Create a new world with 900x700 cells with a cell size of 1x1 pixels.
         super(900, 700, 1);
         this.getBackground().scale(900,700);
@@ -67,8 +67,7 @@ public class Level1 extends World
         addObject(new Wall(35,86),542,326);
         addObject(new Wall(40,86),358,330);
         addObject(new Wall(220,25),451,359);
-        
-       
+
         
         addObject(new Food1(),401,234);
         addObject(new Food1(),401,194);
@@ -199,8 +198,7 @@ public class Level1 extends World
         addObject(new Food1(),547,663);
         addObject(new Food1(),350,594);
         addObject(new Food1(),852,494);
-        
-        
+
         addObject(new Food2(),850,460);
         addObject(new Food2(),40,460);
         addObject(new Food2(),40,194);
@@ -209,20 +207,21 @@ public class Level1 extends World
         addObject(new Food2(),853,36);
         addObject(new Food2(),39,663);
         addObject(new Food2(),43,36);
-        
-       
+
         
         addObject(counter,81, 260);
-        
-        
-    }
-     Counter counter = new Counter();
-    public Counter getCounter(){
+        addObject(binarycounter,75, 387);
+   }
+   Counter counter = new Counter();
+   public Counter getCounter(){
         return counter;
     }
-    
-    
-    public void act(){
+   BinaryCounter binarycounter = new BinaryCounter();
+   public BinaryCounter getBinaryCounter(){
+        return binarycounter;
+    }
+
+   public void act(){
         if (getObjects(Food1.class).size() == 0 && getObjects(Food2.class).size() == 0){
             Greenfoot.setWorld(new Level2());
         }

@@ -40,52 +40,37 @@ public class Pacman extends Actor
         int height = rightGif.getCurrentImage().getHeight();
         if (isMove && getOneObjectAtOffset(width * (int)Math.cos(Math.toRadians(angle)),height * (int)Math.sin(Math.toRadians(angle)), Wall.class) == null){
             setRotation(angle);
-            move(1);
+            move(2);
         }
-        if(food1!=null)
-            {
-               World myWorld = getWorld();
-               myWorld.removeObject(food1);
-               Level1 level1 = (Level1)myWorld;
-               Counter counter = level1.getCounter();
-               counter.addScore();
-               
-              
-            } 
-        if(food2!=null)
-            {
-               World myWorld = getWorld();
-               myWorld.removeObject(food2);
-               Level1 level1 = (Level1)myWorld;
-               Counter counter = level1.getCounter();
-               counter.addScore();
-               
-            } 
-        if(food3!=null)
-            {
-               World myWorld = getWorld();
-               myWorld.removeObject(food3);
-               Level2 level2 = (Level2)myWorld;
-               Counter2 counter2 = level2.getCounter();
-               counter2.addScore();
-               
-              
-            } 
-        if(food4!=null)
-            {
-               World myWorld = getWorld();
-               myWorld.removeObject(food4);
-               Level2 level2 = (Level2)myWorld;
-               Counter2 counter2 = level2.getCounter();
-               counter2.addScore();
-               
-              
-            } 
+        if(food1!=null){
+            World myWorld = getWorld();
+            myWorld.removeObject(food1);
+            Level1 level1 = (Level1)myWorld;
+            Counter counter = level1.getCounter();
+            counter.addScore();
+        } 
+        if(food2!=null){
+            World myWorld = getWorld();
+            myWorld.removeObject(food2);
+            Level1 level1 = (Level1)myWorld;
+            Counter counter = level1.getCounter();
+            counter.addScore();
+        } 
+        if(food3!=null){
+            World myWorld = getWorld();
+            myWorld.removeObject(food3);
+            Level2 level2 = (Level2)myWorld;
+            Counter2 counter2 = level2.getCounter();
+            counter2.addScore();
+        } 
+        if(food4!=null){
+            World myWorld = getWorld();
+            myWorld.removeObject(food4);
+            Level2 level2 = (Level2)myWorld;
+            Counter2 counter2 = level2.getCounter();
+            counter2.addScore();
+        } 
     }
-    
-    
-    
 }
-        
-       
+
    
