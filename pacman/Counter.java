@@ -21,5 +21,8 @@ public class Counter extends Actor
     public void addScore(){
         score += 10;
     }
+    public void addScore2(){
+        score +=20;
+    }
 }
     

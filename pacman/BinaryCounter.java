@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.io.*;
 /**
  * Write a description of class BinaryCounter here.
  * 
@@ -18,12 +18,17 @@ public class BinaryCounter extends Counter
         setImage(new GreenfootImage("Binary Score: " + binaryScore, 20,Color.WHITE, Color.BLACK));
     }
 
-    public void bAddScore(){
+    public static void bAddScore(int score){
+        /*
         while(score > 0){
             binaryScore = "" + (score % 2) + binaryScore;
             score /= 2;
         }
-        //return binaryScore;
+        return binaryScore;
+        */ 
+       
+        System.out.println(Integer.toBinaryString(score));
+    
     }
 
 }    
