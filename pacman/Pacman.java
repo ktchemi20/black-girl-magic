@@ -49,7 +49,7 @@ public class Pacman extends Actor
             Counter counter = level1.getCounter();
             counter.addScore();
             BinaryCounter binarycounter = level1.getBinaryCounter();
-            binarycounter.addScore();
+            
         } 
         if(food2!=null){
             World myWorld = getWorld();
@@ -58,7 +58,7 @@ public class Pacman extends Actor
             Counter counter = level1.getCounter();
             counter.addScore2();
             BinaryCounter binarycounter = level1.getBinaryCounter();
-            binarycounter.addScore();
+            
         } 
         if(food3!=null){
             World myWorld = getWorld();
