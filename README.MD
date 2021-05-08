@@ -13,4 +13,5 @@ HOW TO PLAY:
 
 Click the link below to see our blog :)
 
-bgmpacman.weebly.com
+[bgmpacman.weebly.com
+](url)
