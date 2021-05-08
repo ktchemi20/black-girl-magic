@@ -11,4 +11,6 @@ HOW TO PLAY:
 
 
 
-Click here to see our blog. 
+Click the link below to see our blog :)
+
+bgmpacman.weebly.com
